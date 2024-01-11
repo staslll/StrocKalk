@@ -33,10 +33,10 @@ public class StrocKalk {
             throw new Exception("Ошибка в знаке действмя.");
         }
         if (oper == '*' || oper == '/') {
-            if (expresion[1].contains("\"")) throw new Exception("Умножать,делить только на число и без кавычек.");
+            if (expresion[1].contains("\"")) throw new Exception("Умножать,делить только строка на число и без кавычек.");
         }
         if (oper == '+' || oper == '-'){
-            if (expresion[0].contains("\"")){
+            if (expresion[0].contains("\"") && expresion[1].contains("\"")){
             }else
                 throw new Exception("Скложение и вычитание только между строками.");
         }
